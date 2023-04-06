@@ -1,0 +1,42 @@
+import os
+from pytube import YouTube
+from moviepy.editor import *
+
+def download_yt():
+    url = input('Digite a URL: ')
+    yt = YouTube(url)
+    video = yt.streams.get_highest_resolution()
+    video.download()
+
+def convert_download():
+    url = input('Digite a URL: ')
+    yt = YouTube(url)
+    title = yt.title
+    print(f"Baixando vídeo '{title}'...")
+    video = yt.streams.get_highest_resolution()
+    video_file = video.download()
+
+    print(f"Convertendo vídeo '{title}' para MP3...")
+
+    
+    audio_file = title + ".mp3"
+    video_clip = VideoFileClip(video_file)
+    audio_clip = video_clip.audio
+    audio_clip.write_audiofile(audio_file)
+
+    
+    os.remove(video_file)
+
+    print(f"O áudio do vídeo '{title}' foi baixado e salvo como '{audio_file}'.")
+
+
+    
+
+one_in = input('Download Video[1] | Download e conversão[2]: ')
+
+if one_in == '1':
+    download_yt()
+elif one_in == '2':
+    convert_download()
+else:
+    print('Digite uma opção válida.')
