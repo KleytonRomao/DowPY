@@ -2,12 +2,26 @@ import os
 from pytube import YouTube
 from moviepy.editor import *
 
-def download_yt():
-    url = input('Digite a URL: ')
-    yt = YouTube(url)
-    video = yt.streams.get_highest_resolution()
-    video.download()
 
+def menu():
+    print('''
+-----------------------------------
+         MENU DE DOWNLOAD          
+-----------------------------------
+1. Baixar vídeo
+2. Baixar e converter para MP3
+-----------------------------------
+''')
+
+def download_yt():
+    try:
+        url = input('Digite a URL: ')
+        yt = YouTube(url)
+        video = yt.streams.get_highest_resolution()
+        video.download()
+    except:
+        print('Verifique a url')
+        return
 def convert_download():
     url = input('Digite a URL: ')
     yt = YouTube(url)
@@ -15,24 +29,22 @@ def convert_download():
     print(f"Baixando vídeo '{title}'...")
     video = yt.streams.get_highest_resolution()
     video_file = video.download()
-
     print(f"Convertendo vídeo '{title}' para MP3...")
-
-    
     audio_file = title + ".mp3"
     video_clip = VideoFileClip(video_file)
     audio_clip = video_clip.audio
     audio_clip.write_audiofile(audio_file)
-
-    
     os.remove(video_file)
-
     print(f"O áudio do vídeo '{title}' foi baixado e salvo como '{audio_file}'.")
 
 
-    
 
-one_in = input('Download Video[1] | Download e conversão[2]: ')
+   
+
+
+
+menu()
+one_in= input("")
 
 if one_in == '1':
     download_yt()
