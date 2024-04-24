@@ -1,5 +1,41 @@
-# DowPY
+# YouTube Downloader
 
-Este é um script simples em Python que permite que você baixe e converta vídeos do YouTube para o formato MP3. O script utiliza a biblioteca pytube para realizar o download do vídeo e a biblioteca moviepy para a conversão para MP3.
+Um simples script em Python para baixar vídeos do YouTube e convertê-los para MP3.
 
+## Requisitos
 
+- Python 3.x
+- Bibliotecas: `pytube`, `moviepy`
+
+Certifique-se de instalar as dependências antes de executar o script.
+
+```bash
+pip install pytube moviepy
+```
+
+## Uso
+
+1. Execute o script:
+
+   ```bash
+   python youtube_downloader.py
+   ```
+
+2. Escolha uma opção no menu:
+   - Opção 1: Baixar vídeo
+   - Opção 2: Baixar e converter para MP3
+
+3. Forneça a URL do vídeo do YouTube quando solicitado.
+
+## Avisos
+
+- Certifique-se de fornecer uma URL válida do YouTube.
+- Os arquivos de áudio MP3 serão salvos na mesma pasta do script.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
+
+## Autor
+
+Este script foi criado por [Seu Nome](https://github.com/seu_usuario).
