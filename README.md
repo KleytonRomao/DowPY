@@ -38,4 +38,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou env
 
 ## Autor
 
-Este script foi criado por [Seu Nome](https://github.com/seu_usuario).
+Este script foi criado por [Kleyton](https://github.com/KleytonRomao/).
