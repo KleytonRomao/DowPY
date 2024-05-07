@@ -28,7 +28,3 @@ Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
 
-Autor
-
-Este script foi criado por Kleyton.
-
