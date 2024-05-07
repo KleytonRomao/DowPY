@@ -10,15 +10,14 @@ Um simples script em Python para baixar vídeos do YouTube e convertê-los para 
 Certifique-se de instalar as dependências antes de executar o script.
 
 ```bash
-pip install pytube moviepy
-```
+pip install -r requeriments.txt
 
-## Uso
+
 
 1. Execute o script:
 
    ```bash
-   python youtube_downloader.py
+   python3 DowPy
    ```
 
 2. Escolha uma opção no menu:
