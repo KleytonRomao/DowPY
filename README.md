@@ -11,6 +11,8 @@ Certifique-se de instalar as dependências antes de executar o script.
 
 ```bash
 pip install -r requeriments.txt
+...
+
 
 
 
